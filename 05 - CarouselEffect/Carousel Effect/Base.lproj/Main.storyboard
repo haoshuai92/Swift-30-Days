@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Carousel_Effect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="K11-eb-4rH">
+                                <rect key="frame" x="-20" y="0.0" width="454" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOi-Ho-uWE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hwq-hV-h3w">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fQO-xf-w2x">
+                                            <rect key="frame" x="0.0" y="89.5" width="414" height="717"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="hcf-yU-VQB">
+                                                <size key="itemSize" width="300" height="400"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="100" maxX="20" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCellIdentifier" id="lD0-Te-uZB" customClass="IntersetCell" customModule="Carousel_Effect" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="208.5" width="300" height="400"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodyline" translatesAutoresizingMaskIntoConstraints="NO" id="HXO-BU-5Yg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="340"/>
+                                                            </imageView>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOB-r2-fLx">
+                                                                <rect key="frame" x="0.0" y="340" width="300" height="60"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FoT-dl-6Ly">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love your new hair style." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kx-UK-TFl">
+                                                                            <rect key="frame" x="10" y="10" width="280" height="40"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="8kx-UK-TFl" secondAttribute="trailing" constant="10" id="2yN-vq-bZm"/>
+                                                                        <constraint firstItem="8kx-UK-TFl" firstAttribute="top" secondItem="FoT-dl-6Ly" secondAttribute="top" constant="10" id="CcY-R4-BnA"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="8kx-UK-TFl" secondAttribute="bottom" constant="10" id="NmS-fh-v6h"/>
+                                                                        <constraint firstItem="8kx-UK-TFl" firstAttribute="leading" secondItem="FoT-dl-6Ly" secondAttribute="leading" constant="10" id="PHC-ro-Ohs"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="1hd-XL-IaN"/>
+                                                                </constraints>
+                                                                <blurEffect style="extraLight"/>
+                                                            </visualEffectView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="EOB-r2-fLx" secondAttribute="bottom" id="19t-3J-z7w"/>
+                                                        <constraint firstItem="EOB-r2-fLx" firstAttribute="top" secondItem="HXO-BU-5Yg" secondAttribute="bottom" id="2NK-il-8ss"/>
+                                                        <constraint firstItem="HXO-BU-5Yg" firstAttribute="leading" secondItem="lD0-Te-uZB" secondAttribute="leading" id="SQZ-SB-4us"/>
+                                                        <constraint firstItem="EOB-r2-fLx" firstAttribute="leading" secondItem="lD0-Te-uZB" secondAttribute="leading" id="WkU-8s-sJi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HXO-BU-5Yg" secondAttribute="trailing" id="cHv-jA-eFe"/>
+                                                        <constraint firstItem="HXO-BU-5Yg" firstAttribute="top" secondItem="lD0-Te-uZB" secondAttribute="top" id="iC5-DY-Si4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EOB-r2-fLx" secondAttribute="trailing" id="nY3-X7-hKx"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="featuredImgView" destination="HXO-BU-5Yg" id="dML-RD-Ckn"/>
+                                                        <outlet property="interestTitleLabel" destination="8kx-UK-TFl" id="8O2-tC-yD4"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="f89-SJ-HON"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="cad-Ip-RuX"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fQO-xf-w2x" firstAttribute="centerY" secondItem="hwq-hV-h3w" secondAttribute="centerY" id="0HF-HI-Qsf"/>
+                                        <constraint firstAttribute="trailing" secondItem="fQO-xf-w2x" secondAttribute="trailing" id="GvG-Hq-TeF"/>
+                                        <constraint firstItem="fQO-xf-w2x" firstAttribute="leading" secondItem="hwq-hV-h3w" secondAttribute="leading" id="ZSr-Kz-fr3"/>
+                                        <constraint firstItem="fQO-xf-w2x" firstAttribute="height" secondItem="hwq-hV-h3w" secondAttribute="height" multiplier="0.8" id="fHW-K8-RkP"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UOi-Ho-uWE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tql-uk-bMM"/>
+                            <constraint firstAttribute="bottom" secondItem="UOi-Ho-uWE" secondAttribute="bottom" id="XlY-85-VCJ"/>
+                            <constraint firstItem="K11-eb-4rH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dN1-6Q-B8x"/>
+                            <constraint firstItem="UOi-Ho-uWE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dNx-HO-a4A"/>
+                            <constraint firstItem="K11-eb-4rH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="gxk-zS-KGl"/>
+                            <constraint firstItem="K11-eb-4rH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-20" id="hwG-73-HyE"/>
+                            <constraint firstAttribute="bottom" secondItem="K11-eb-4rH" secondAttribute="bottom" id="o4x-xS-etj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UOi-Ho-uWE" secondAttribute="trailing" id="rl2-C7-jCd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="fQO-xf-w2x" id="thR-Y6-zI8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue" width="375" height="667"/>
+        <image name="bodyline" width="596" height="595"/>
+    </resources>
+</document>
