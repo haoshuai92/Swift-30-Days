@@ -25,11 +25,19 @@ class ViewController: UIViewController {
         leftVc.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         centerVc.view.frame = CGRect(x: screenWidth, y: 0, width: screenWidth, height: screenHeight)
         rightVc.view.frame = CGRect(x: 2*screenWidth, y: 0, width: screenWidth, height: screenHeight)
+        leftVc.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
+        scrollView.frame = UIScreen.main.bounds
+        scrollView.contentSize = CGSize(width: screenWidth * 3, height: screenHeight)
+        scrollView.delaysContentTouches = false;
         scrollView.addSubview(leftVc.view)
         scrollView.addSubview(centerVc.view)
         scrollView.addSubview(rightVc.view)
-        scrollView.contentSize = CGSize(width: screenWidth * 3, height: screenHeight)
+        // 如果不添加子控制器的话,会出现按钮无法响应的情况
+        self.addChild(leftVc)
+        self.addChild(centerVc)
+        self.addChild(rightVc)
+        
     }
     
     override var prefersStatusBarHidden: Bool {

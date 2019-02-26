@@ -20,14 +20,28 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJt-RH-aBN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkR-yE-UA9">
+                                        <rect key="frame" x="0.0" y="0.0" width="1242" height="896"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PkR-yE-UA9" secondAttribute="trailing" id="4s5-cf-vk0"/>
+                                    <constraint firstItem="PkR-yE-UA9" firstAttribute="leading" secondItem="GJt-RH-aBN" secondAttribute="leading" id="UiI-rF-i5e"/>
+                                    <constraint firstAttribute="bottom" secondItem="PkR-yE-UA9" secondAttribute="bottom" id="tk6-yp-oOt"/>
+                                    <constraint firstItem="PkR-yE-UA9" firstAttribute="top" secondItem="GJt-RH-aBN" secondAttribute="top" id="wUh-hS-4On"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GJt-RH-aBN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ne2-x5-syc"/>
-                            <constraint firstAttribute="bottom" secondItem="GJt-RH-aBN" secondAttribute="bottom" id="TYd-PW-3WM"/>
-                            <constraint firstItem="GJt-RH-aBN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="frL-ov-PHl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GJt-RH-aBN" secondAttribute="trailing" id="jao-cs-2Pc"/>
+                            <constraint firstItem="GJt-RH-aBN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6zu-rt-a6b"/>
+                            <constraint firstItem="PkR-yE-UA9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="3" id="AE5-x6-LM0"/>
+                            <constraint firstItem="PkR-yE-UA9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="AK6-6O-lQg"/>
+                            <constraint firstItem="GJt-RH-aBN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Xcz-Zn-dZD"/>
+                            <constraint firstItem="GJt-RH-aBN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rO3-Yl-zbt"/>
+                            <constraint firstItem="GJt-RH-aBN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uHs-Mc-L56"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
