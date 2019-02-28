@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var tableView: UITableView!
     
     var refreshControl = UIRefreshControl()
-    var navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: (UIApplication.shared.statusBarFrame.height + 44)))
+    var navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height, width: UIScreen.main.bounds.size.width, height: 44))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,18 +32,18 @@ class ViewController: UIViewController {
         
         emojiData = favoriteEmoji
         
-        
     }
     
     fileprivate func setupNavi() {
-        self.title = "emoji"
-//        self.navBar.barStyle = .blackTranslucent
+        navBar.barStyle = .black
+        navBar.isTranslucent = true
         view.addSubview(navBar)
+        navBar.delegate = self
     }
     
     fileprivate func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView.backgroundColor = UIColor(red:0.092, green:0.096, blue:0.116, alpha:1)
+//        tableView.backgroundColor = UIColor(red:0.092, green:0.096, blue:0.116, alpha:1)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -75,8 +75,6 @@ class ViewController: UIViewController {
             self.index = (self.index + 1) % 2
         }
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -93,6 +91,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         
         return cell
+    }
+}
+
+extension ViewController: UINavigationBarDelegate {
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
 }
 
