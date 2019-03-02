@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageScrollerEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Steve" translatesAutoresizingMaskIntoConstraints="NO" id="esm-qG-MyB">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6I-gJ-A37">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oYp-bO-KGf">
+                                    <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cje-eI-HVN">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Steve" translatesAutoresizingMaskIntoConstraints="NO" id="adE-Kx-Qeb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="adE-Kx-Qeb" firstAttribute="leading" secondItem="Cje-eI-HVN" secondAttribute="leading" id="Pd7-OW-sZW"/>
+                                    <constraint firstAttribute="trailing" secondItem="adE-Kx-Qeb" secondAttribute="trailing" id="SId-u6-pub"/>
+                                    <constraint firstAttribute="bottom" secondItem="adE-Kx-Qeb" secondAttribute="bottom" id="qNc-es-76Z"/>
+                                    <constraint firstItem="adE-Kx-Qeb" firstAttribute="top" secondItem="Cje-eI-HVN" secondAttribute="top" id="qXO-cy-G0t"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Yw2-8f-mi9"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cje-eI-HVN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="43N-tU-eWI"/>
+                            <constraint firstAttribute="bottom" secondItem="c6I-gJ-A37" secondAttribute="bottom" id="4af-xr-0QV"/>
+                            <constraint firstItem="esm-qG-MyB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C2r-B5-rVJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Cje-eI-HVN" secondAttribute="bottom" id="JCl-me-tZA"/>
+                            <constraint firstItem="esm-qG-MyB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="P9K-X5-Y8x"/>
+                            <constraint firstAttribute="bottom" secondItem="esm-qG-MyB" secondAttribute="bottom" id="PhV-26-45m"/>
+                            <constraint firstAttribute="trailing" secondItem="c6I-gJ-A37" secondAttribute="trailing" id="aNS-36-2jG"/>
+                            <constraint firstAttribute="trailing" secondItem="Cje-eI-HVN" secondAttribute="trailing" id="fla-Bv-zSF"/>
+                            <constraint firstItem="Cje-eI-HVN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rEp-pD-hKA"/>
+                            <constraint firstItem="c6I-gJ-A37" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sbI-LF-pAt"/>
+                            <constraint firstItem="c6I-gJ-A37" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v0X-F9-XEy"/>
+                            <constraint firstAttribute="trailing" secondItem="esm-qG-MyB" secondAttribute="trailing" id="x3M-8Y-a7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="adE-Kx-Qeb" id="BpO-ZK-gtW"/>
+                        <outlet property="imageViewBottomConstraint" destination="qNc-es-76Z" id="ngK-09-tIx"/>
+                        <outlet property="imageViewLeadingConstraint" destination="Pd7-OW-sZW" id="7li-wf-jRZ"/>
+                        <outlet property="imageViewTopConstraint" destination="qXO-cy-G0t" id="cLs-gk-huK"/>
+                        <outlet property="imageViewTrailingConstraint" destination="SId-u6-pub" id="MUI-WJ-xJH"/>
+                        <outlet property="scrollView" destination="Cje-eI-HVN" id="tkf-xE-Rgb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Steve" width="320" height="320"/>
+    </resources>
+</document>
