@@ -11,7 +11,6 @@ import UIKit
 class NewsTableViewController: UITableViewController {
 
     
-    let menuTrasitionManager = MenuTrasitionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +20,15 @@ class NewsTableViewController: UITableViewController {
         tableView.separatorStyle = .none
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let menuTableViewController = segue.destination as! MenuTableViewController
-        menuTableViewController.currentItem = self.title!
-        menuTableViewController.delegate = self
-        menuTableViewController.transitioningDelegate = menuTrasitionManager
-        menuTrasitionManager.delegate = self
+    @IBAction func buttonAction(_ sender: UIBarButtonItem) {
+        guard let menuVc = self.storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") else { return }
+        let customPresentationController = CustomPresentationController.init(presentedViewController: menuVc, presenting: self)
+        menuVc.transitioningDelegate = customPresentationController
+        
+        self.present(menuVc, animated: true, completion: nil)
+        
     }
+    
 
 }
 
@@ -80,11 +81,7 @@ extension NewsTableViewController {
     
 }
 
-extension NewsTableViewController: MenuTrasitionManagerDelegate {
-    func dismiss() {
-        dismiss(animated: true, completion: nil)
-    }
-}
+
 
 extension NewsTableViewController: MenuTableViewControllerDelegate {
     func menuTableViewController(_ viewController: MenuTableViewController, didSelected item: String?) {

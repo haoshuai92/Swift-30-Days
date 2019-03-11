@@ -15,7 +15,7 @@
 		5C1655302230F0EC00163F2B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16552F2230F0EC00163F2B /* MenuTableViewController.swift */; };
 		5C1655322230F10800163F2B /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1655312230F10800163F2B /* NewsTableViewCell.swift */; };
 		5C1655342230F11700163F2B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1655332230F11700163F2B /* MenuTableViewCell.swift */; };
-		5C1655362230FABA00163F2B /* MenuTrasitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1655352230FABA00163F2B /* MenuTrasitionManager.swift */; };
+		5C97FB0522365615000DD697 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C97FB0422365615000DD697 /* CustomPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		5C16552F2230F0EC00163F2B /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		5C1655312230F10800163F2B /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		5C1655332230F11700163F2B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		5C1655352230FABA00163F2B /* MenuTrasitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTrasitionManager.swift; sourceTree = "<group>"; };
+		5C97FB0422365615000DD697 /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				5C16552F2230F0EC00163F2B /* MenuTableViewController.swift */,
 				5C1655312230F10800163F2B /* NewsTableViewCell.swift */,
 				5C1655332230F11700163F2B /* MenuTableViewCell.swift */,
-				5C1655352230FABA00163F2B /* MenuTrasitionManager.swift */,
+				5C97FB0422365615000DD697 /* CustomPresentationController.swift */,
 			);
 			path = SlideMenu;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 			files = (
 				5C16552E2230F0D300163F2B /* NewsTableViewController.swift in Sources */,
 				5C16551C2230EA6000163F2B /* AppDelegate.swift in Sources */,
-				5C1655362230FABA00163F2B /* MenuTrasitionManager.swift in Sources */,
+				5C97FB0522365615000DD697 /* CustomPresentationController.swift in Sources */,
 				5C1655322230F10800163F2B /* NewsTableViewCell.swift in Sources */,
 				5C1655302230F0EC00163F2B /* MenuTableViewController.swift in Sources */,
 				5C1655342230F11700163F2B /* MenuTableViewCell.swift in Sources */,
