@@ -56,7 +56,7 @@ class CustomPresentationController: UIPresentationController {
         dimmingView.backgroundColor = .black
         dimmingView.isOpaque = false
         dimmingView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        dimmingView.addGestureRecognizer(UIGestureRecognizer.init(target: self, action: #selector(dimmingViewTapped(_:))))
+        dimmingView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(dimmingViewTapped)))
         self.dimmingView = dimmingView
         self.containerView?.addSubview(dimmingView)
         
@@ -132,7 +132,7 @@ class CustomPresentationController: UIPresentationController {
         self.presentationWrappingView?.frame = self.frameOfPresentedViewInContainerView
     }
     
-    @objc func dimmingViewTapped(_ sender: UITapGestureRecognizer)
+    @objc func dimmingViewTapped()
     {
         self.presentingViewController.dismiss(animated: true, completion: nil)
     }
@@ -151,20 +151,24 @@ extension CustomPresentationController: UIViewControllerAnimatedTransitioning
         let fromVc = transitionContext.viewController(forKey: .from)!
         let toVc = transitionContext.viewController(forKey: .to)!
         let fromView = transitionContext.view(forKey: .from)
-        let toView = transitionContext.view(forKey: .to)!
+        let toView = transitionContext.view(forKey: .to)
         let containerView = transitionContext.containerView
-        
         
         var fromViewFinalFrame = transitionContext.finalFrame(for: fromVc)
         var toViewInitialFrame = transitionContext.initialFrame(for: toVc)
-        let toViewFinalFrame = transitionContext.finalFrame(for: toVc)
+        var toViewFinalFrame = transitionContext.finalFrame(for: toVc)
         
-        containerView .addSubview(toView)
+        
         
         if self.isPresenting
         {
-            toViewInitialFrame.origin = CGPoint(x: containerView.bounds.minX, y: containerView.bounds.maxY)
-            toViewInitialFrame.size = toViewFinalFrame.size
+            
+            toViewInitialFrame.origin = CGPoint(x: containerView.bounds.minX, y: UIApplication.shared.statusBarFrame.height + 44)
+            toViewInitialFrame.size = CGSize(width: toViewFinalFrame.width, height: 0)
+            toViewFinalFrame.size = CGSize(width: toViewFinalFrame.width, height: 420)
+            toViewFinalFrame.origin = CGPoint(x: containerView.bounds.minX, y: UIApplication.shared.statusBarFrame.height + 44)
+            
+            containerView.addSubview(toView!)
         }
         else
         {
@@ -173,10 +177,20 @@ extension CustomPresentationController: UIViewControllerAnimatedTransitioning
         
         let transitionDuration = self.transitionDuration(using: transitionContext)
         
+            
+        if self.isPresenting
+        {
+            toView!.frame = toViewInitialFrame
+        }
+        else
+        {
+            fromView!.frame = fromViewFinalFrame
+        }
+        
         UIView.animate(withDuration: transitionDuration, animations: {
             if self.isPresenting
             {
-                toView.frame = toViewFinalFrame
+                toView!.frame = toViewFinalFrame
             }
             else
             {
@@ -194,6 +208,10 @@ extension CustomPresentationController: UIViewControllerAnimatedTransitioning
 
 extension CustomPresentationController: UIViewControllerTransitioningDelegate
 {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return self;
+    }
+    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.isPresenting = true
         return self
