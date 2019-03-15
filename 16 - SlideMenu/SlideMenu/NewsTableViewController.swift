@@ -21,10 +21,11 @@ class NewsTableViewController: UITableViewController {
     }
     
     @IBAction func buttonAction(_ sender: UIBarButtonItem) {
-        guard let menuVc = self.storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") else { return }
+        guard let menuVc = (self.storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController") as? MenuTableViewController) else { return }
         let customPresentationController = CustomPresentationController.init(presentedViewController: menuVc, presenting: self)
         menuVc.transitioningDelegate = customPresentationController
-        
+        menuVc.delegate = self
+        menuVc.currentItem = self.title ?? ""
         self.present(menuVc, animated: true, completion: nil)
         
     }

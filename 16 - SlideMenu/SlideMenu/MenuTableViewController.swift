@@ -31,7 +31,7 @@ class MenuTableViewController: UITableViewController {
         view.backgroundColor = UIColor(red:0.109, green:0.114, blue:0.128, alpha:1)
         tableView.separatorStyle = .none
         
-        self.preferredContentSize = CGSize(width: self.view.bounds.size.width, height: 420)
+        self.preferredContentSize = CGSize(width: self.view.bounds.size.width, height: 300)
     }
     
     
