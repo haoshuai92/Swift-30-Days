@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_DTouchQuickAction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Touch Quick Action Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ad-nu-ave">
+                                <rect key="frame" x="92" y="436" width="230" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Ad-nu-ave" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UTd-jE-PJo"/>
+                            <constraint firstItem="5Ad-nu-ave" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zu5-aG-tIv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+        <!--Run View Controller-->
+        <scene sceneID="U4j-d4-GNY">
+            <objects>
+                <viewController storyboardIdentifier="RunVC" id="XZY-Lr-zmC" customClass="RunViewController" customModule="_DTouchQuickAction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JHg-pU-DNg"/>
+                        <viewControllerLayoutGuide type="bottom" id="cmV-UU-QLT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JdQ-yX-rNb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nikeplus" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-vu-f24">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93682062629999996" green="0.93713349099999999" blue="0.1168349236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aTf-vu-f24" secondAttribute="trailing" id="WZc-9U-yXU"/>
+                            <constraint firstAttribute="bottom" secondItem="aTf-vu-f24" secondAttribute="bottom" id="X8n-YH-IqT"/>
+                            <constraint firstItem="aTf-vu-f24" firstAttribute="leading" secondItem="JdQ-yX-rNb" secondAttribute="leading" id="m4Z-wI-g8P"/>
+                            <constraint firstItem="aTf-vu-f24" firstAttribute="top" secondItem="JdQ-yX-rNb" secondAttribute="top" id="mdV-Yt-580"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AOT-u9-a94"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vV1-Zy-TaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="127"/>
+        </scene>
+        <!--Sacn View Controller-->
+        <scene sceneID="y2I-MA-IC9">
+            <objects>
+                <viewController storyboardIdentifier="ScanVC" id="n8O-uC-Riy" customClass="SacnViewController" customModule="_DTouchQuickAction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q74-cm-Hc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="qAx-su-7va"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qqq-JL-Pcu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wechat" translatesAutoresizingMaskIntoConstraints="NO" id="tmG-GR-QaZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.94574928280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tmG-GR-QaZ" firstAttribute="top" secondItem="Qqq-JL-Pcu" secondAttribute="top" id="7lR-RI-vIq"/>
+                            <constraint firstAttribute="trailing" secondItem="tmG-GR-QaZ" secondAttribute="trailing" id="QFX-qU-l30"/>
+                            <constraint firstItem="tmG-GR-QaZ" firstAttribute="leading" secondItem="Qqq-JL-Pcu" secondAttribute="leading" id="jM6-hI-JTt"/>
+                            <constraint firstAttribute="bottom" secondItem="tmG-GR-QaZ" secondAttribute="bottom" id="yW3-br-G7P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bQ2-aJ-mkX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3x-L8-V2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="127"/>
+        </scene>
+        <!--Switch Wifi View Controller-->
+        <scene sceneID="0RI-3J-jnk">
+            <objects>
+                <viewController storyboardIdentifier="WiFiVC" id="i5t-nE-h6f" customClass="SwitchWifiViewController" customModule="_DTouchQuickAction" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zlq-EV-IGb"/>
+                        <viewControllerLayoutGuide type="bottom" id="KgL-pX-a3S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Lb-Ut-5GO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting" translatesAutoresizingMaskIntoConstraints="NO" id="IDA-yd-YGL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89466416839999996" green="0.026873899619999999" blue="0.089954406020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IDA-yd-YGL" secondAttribute="trailing" id="7cL-Jh-2LN"/>
+                            <constraint firstItem="IDA-yd-YGL" firstAttribute="top" secondItem="5Lb-Ut-5GO" secondAttribute="top" id="NUQ-2F-7Z1"/>
+                            <constraint firstAttribute="bottom" secondItem="IDA-yd-YGL" secondAttribute="bottom" id="a7x-YR-Kib"/>
+                            <constraint firstItem="IDA-yd-YGL" firstAttribute="leading" secondItem="5Lb-Ut-5GO" secondAttribute="leading" id="iJ2-if-1cr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W0e-Gs-LMl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBb-is-L3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2670" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nikeplus" width="375" height="667"/>
+        <image name="setting" width="375" height="667"/>
+        <image name="wechat" width="375" height="667"/>
+    </resources>
+</document>
